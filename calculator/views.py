@@ -31,6 +31,10 @@ DATA = {
 
 def handler(request, dish, servings=1):
     recipe = {}
+    try:
+        servings = int(request.GET.get("servings"))
+    except:
+        pass
     if servings > 0 and dish in DATA:
         for i in DATA[dish]:
             recipe.update(

@@ -19,5 +19,4 @@ from calculator.views import handler
 
 urlpatterns = [
     path('<dish>/', handler),
-    path('<dish>/<int:servings>', handler),
 ]
